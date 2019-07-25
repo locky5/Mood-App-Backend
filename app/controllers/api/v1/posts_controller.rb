@@ -13,7 +13,7 @@ class Api::V1::PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:name)
+    params.require(:post).permit(:description, :user_id, :mood_id)
   end
 
 end
