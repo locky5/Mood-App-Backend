@@ -15,10 +15,21 @@ class Api::V1::PostsController < ApplicationController
     render json: post
   end
 
+  def update
+    post = Post.find(params[:id])
+    post.update(post_params)
+    render json: post
+  end
+
+  def destroy
+    post = Post.find(params[:id])
+    post.delete
+  end
+
   private
 
   def post_params
-    params.require(:post).permit(:description, :user_id, :mood_id)
+    params.require(:post).permit(:description, :likes, :user_id, :mood_id)
   end
 
 end

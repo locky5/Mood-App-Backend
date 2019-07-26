@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 520190725175138) do
 
   create_table "posts", force: :cascade do |t|
     t.string "description"
+    t.integer "likes", default: 0
     t.bigint "user_id"
     t.bigint "mood_id"
     t.datetime "created_at", null: false
