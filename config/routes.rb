@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       resources :users, except: [:create]
       resources :posts
       resources :moods
+      resources :comments
 
       post "/signup", to: "users#create"
       post "/login", to: "auth#login"

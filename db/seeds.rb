@@ -19,3 +19,7 @@ angry = Mood.create(name: "angry", value: 3)
 annoyed = Mood.create(name: "annoyed", value: 2)
 disgusted = Mood.create(name: "disgusted", value: 1)
 depressed = Mood.create(name: "depressed", value: 0)
+
+post = Post.create(description: "cool", likes: 0, user_id: 1, mood_id: 2)
+
+comment1 = Comment.create(description: "hey good comment!", post_id: 1)
